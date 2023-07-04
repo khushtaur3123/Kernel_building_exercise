@@ -30,10 +30,8 @@ int schedtune_freqvar_update_table(unsigned int *src, int src_size,
 					struct freqvar_boost_table *dst);
 #else
 static inline int schedtune_freqvar_boost(int cpu) { return 0; }
-static inline int schedtune_freqvar_boost_init(struct cpufreq_policy *policy,
-						struct freqvar_boost_data *data) { return 0; };
-static inline int schedtune_freqvar_boost_exit(struct cpufreq_policy *policy,
-						struct freqvar_boost_data *data) { return 0; };
+static inline int schedtune_freqvar_boost_init(struct cpufreq_policy *policy, struct freqvar_boost_data *data) { return 0; };
+static inline int schedtune_freqvar_boost_exit(struct cpufreq_policy *policy, struct freqvar_boost_data *data) { return 0; };
 #endif
 
 #include <linux/reciprocal_div.h>
